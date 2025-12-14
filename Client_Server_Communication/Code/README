@@ -1,0 +1,25 @@
+
+One client, one server.
+
+Compile using make.
+Start the server using ./server
+Start the client using ./client localhost
+
+The server waits for the client to initiate a connection.
+The client tries to establish the connection using connect.
+
+Server waits for data on the client's socket or STDIN.
+If data is present on STDIN, the server sends the data to the client.
+If data is present on the client's socket, the server displays the data on STDOUT.
+
+
+Modify this implementation to support multiple clients (at least four), using thread and event-based models.
+If the data is present on the server's STDIN, the server sends the data to one client of its choice.
+
+1. In the thread model, create multiple threads (using pthread_create) to accept connection requests. Once the connection has been established, you can use the existing select-based implementation to communicate with the client.
+
+2. In the event-based mode, modify the existing select implementation to also accept connection requests from the client. Notice that the connect system call at the client's end writes to the socket the server is listening to (i.e., the one returned by the socket system call).
+
+Submit two files corresponding to the thread and the event-based implementations of the server.
+
+Follow the naming convention of homework and assignments for both files.
