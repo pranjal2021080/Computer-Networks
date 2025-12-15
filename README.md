@@ -121,11 +121,4 @@ The repository is structured to ensure:
 * Professional academic presentation
 * Reusability for future reference
 
----
 
-
-* Shorten this for the GitHub **“About” sidebar**
-* Customize it to match a **specific course syllabus**
-* Add **build/run instructions per assignment**
-
-Just tell me 👍
